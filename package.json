@@ -1,0 +1,12 @@
+{
+  "name": "redux-loader-middleware",
+  "version": "1.0.0",
+  "description": "Loader middleware for redux",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:anupvarghese/redux-loader-middleware.git",
+    "type": "git"
+  },
+  "author": "Anoop Varghese",
+  "license": "MIT"
+}
