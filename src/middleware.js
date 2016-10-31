@@ -10,9 +10,7 @@ const loader = (showEvents, hideEvents) => ({ dispatch }) => next => (action) =>
   }
   if (hideEvents.indexOf(action.type) !== -1) {
     const { id } = action;
-    dispatch(hideLoader({
-      id,
-    }));
+    dispatch(hideLoader(id));
   }
   return next(action);
 };
