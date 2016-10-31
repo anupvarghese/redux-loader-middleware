@@ -22,11 +22,11 @@ describe('Loader middleware test', () => {
   });
 
   it('should dispatch LOADER action', () => {
-    const originalAction = { type: 'TESTING_LOADER', message: 'abc', id: '123' };
+    const originalAction = { type: 'TESTING_LOADER', loaderMessage: 'abc', loaderId: '123' };
     const expectedActions = [
       showLoader({
-        message: 'abc',
-        id: '123',
+        loaderMessage: 'abc',
+        loaderId: '123',
       }),
       originalAction,
     ];
@@ -40,7 +40,7 @@ describe('Loader middleware test', () => {
   });
 
   it('should dispatch HIDE_LOADER action', () => {
-    const originalAction = { type: 'TESTING_HIDE_LOADER', id: '1234' };
+    const originalAction = { type: 'TESTING_HIDE_LOADER', loaderId: '1234' };
     const expectedActions = [
       hideLoader('1234'),
       originalAction,
@@ -55,7 +55,7 @@ describe('Loader middleware test', () => {
   });
 
   it('should not dispatch LOADER action', () => {
-    const originalAction = { type: 'SOME_OTHER_ACTION', message: 'abc', delay: 1500 };
+    const originalAction = { type: 'SOME_OTHER_ACTION', loaderMessage: 'abc' };
     const mockDispatch = (action) => {
       expect(action).to.deep.equal(originalAction);
       return action;

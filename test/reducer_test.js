@@ -9,8 +9,8 @@ describe('loader reducer', () => {
 
   it(`should handle ${C.SHOW_LOADER}`, () => {
     const expectedData = [{
-      message: 'Hi',
-      id: '1234',
+      loaderMessage: 'Hi',
+      loaderId: '1234',
     }];
     const action = Object.assign({}, expectedData[0], { type: C.SHOW_LOADER });
     expect(loaderReducer([], action)).to.deep.equal(expectedData);
@@ -18,8 +18,8 @@ describe('loader reducer', () => {
 
   it(`should handle ${C.HIDE_LOADER}`, () => {
     const initialData = [{
-      id: '1234',
+      loaderId: '1234',
     }];
-    expect(loaderReducer(initialData, { type: C.HIDE_LOADER, id: '1234' })).to.deep.equal([]);
+    expect(loaderReducer(initialData, { type: C.HIDE_LOADER, loaderId: '1234' })).to.deep.equal([]);
   });
 });

@@ -1,14 +1,14 @@
 import C from './constants';
 
-const showLoader = ({ message, id }) => ({
+const showLoader = ({ loaderMessage, loaderId }) => ({
   type: C.SHOW_LOADER,
-  message,
-  id,
+  loaderMessage,
+  loaderId,
 });
 
-const hideLoader = id => ({
+const hideLoader = loaderId => ({
   type: C.HIDE_LOADER,
-  id,
+  loaderId,
 });
 
 export {

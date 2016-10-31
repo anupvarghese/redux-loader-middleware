@@ -3,11 +3,11 @@ import C from './constants';
 export default(state = [], action) => {
   switch (action.type) {
     case C.SHOW_LOADER: {
-      const { message, id } = action;
-      return [...state, { message, id }];
+      const { loaderMessage, loaderId } = action;
+      return [...state, { loaderMessage, loaderId }];
     }
     case C.HIDE_LOADER: {
-      return [...state].filter(n => n.id !== action.id);
+      return [...state].filter(n => n.loaderId !== action.loaderId);
     }
     default:
       return state;

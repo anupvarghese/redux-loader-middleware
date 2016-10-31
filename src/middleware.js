@@ -2,15 +2,15 @@ import { showLoader, hideLoader } from './actions';
 
 const loader = (showEvents, hideEvents) => ({ dispatch }) => next => (action) => {
   if (showEvents.indexOf(action.type) !== -1) {
-    const { message, id } = action;
+    const { loaderMessage, loaderId } = action;
     dispatch(showLoader({
-      message,
-      id,
+      loaderMessage,
+      loaderId,
     }));
   }
   if (hideEvents.indexOf(action.type) !== -1) {
-    const { id } = action;
-    dispatch(hideLoader(id));
+    const { loaderId } = action;
+    dispatch(hideLoader(loaderId));
   }
   return next(action);
 };
