@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/anupvarghese/redux-loader-middleware.svg?branch=master)](https://travis-ci.org/anupvarghese/redux-loader-middleware)
+[![npm version](https://badge.fury.io/js/redux-loader-middleware.svg)](https://badge.fury.io/js/redux-loader-middleware)
 
 ## Loader middleware for redux
 
