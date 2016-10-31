@@ -1,6 +1,6 @@
 {
   "name": "redux-loader-middleware",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Loader middleware for redux",
   "main": "index.js",
   "repository": {
